@@ -1,0 +1,19 @@
+#N canvas 347 614 364 306 10;
+#X obj 159 189 3dModulus;
+#X obj 84 189 3dNormalize;
+#X obj 222 189 3dVelocity;
+#X floatatom 159 210 5 0 0 0 - - -;
+#X obj 84 209 3dPoint;
+#X obj 222 209 3dPoint;
+#X obj 159 101 3dPoint;
+#X text 14 13 3pD-Point Unary Operators;
+#X text 14 37 3dNormalize: normalizes the given vector;
+#X text 14 53 3dModulus: computes the modulus of the given vector;
+#X text 14 69 3dVelocity: computes the derivative of the given vector
+;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 6 0 2 0;
+#X connect 6 0 0 0;
+#X connect 6 0 1 0;

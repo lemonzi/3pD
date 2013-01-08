@@ -1,0 +1,6 @@
+#N canvas 200 203 272 109 10;
+#X obj 14 14 inlet;
+#X obj 14 59 outlet;
+#X obj 14 36 expr sqrt($f1*$f1 + $f2*$f2 + $f3*$f3);
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

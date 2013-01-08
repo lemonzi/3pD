@@ -1,0 +1,33 @@
+#N canvas 414 406 478 310 10;
+#X declare -lib mrpeach;
+#X obj 345 121 3dJointViewer 1;
+#X text 28 18 3dJointParser converts 3pD-Kinect messages to 3pD-Point.
+;
+#X text 28 33 3dJointViewer is a visual interface to 3dJointParser.
+;
+#X obj 33 135 import mrpeach;
+#X obj 33 201 unpackOSC;
+#X obj 33 221 routeOSC /joint;
+#X obj 33 181 udpreceive 7110;
+#X obj 33 266 s l_hand;
+#X obj 88 266 s r_hand;
+#X obj 33 242 route l_hand r_hand;
+#X text 30 161 Replace 7710 with your port;
+#X obj 209 148 r l_hand;
+#X obj 345 99 r r_hand;
+#X text 30 79 Below is an example of how 3pD can be used to get OSCeleton
+input;
+#X obj 209 194 3dPoint;
+#X obj 209 172 3dJointParser;
+#X text 29 53 Both can be initialized to filter a specific player.
+;
+#X floatatom 284 195 5 0 0 0 - - -;
+#X connect 4 0 5 0;
+#X connect 5 0 9 0;
+#X connect 6 0 4 0;
+#X connect 9 0 7 0;
+#X connect 9 1 8 0;
+#X connect 11 0 15 0;
+#X connect 12 0 0 0;
+#X connect 15 0 14 0;
+#X connect 15 1 17 0;

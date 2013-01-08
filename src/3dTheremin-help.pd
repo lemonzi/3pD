@@ -1,0 +1,12 @@
+#N canvas 317 205 234 221 10;
+#X text 15 11 3dTheremin: a trivial but lovely;
+#X text 15 26 demonstration of 3pD capabilities;
+#X obj 64 134 3dTheremin;
+#X obj 64 53 3dPoint;
+#X obj 121 53 3dPoint;
+#X obj 54 184 dac~;
+#X connect 2 0 5 0;
+#X connect 2 0 5 1;
+#X connect 3 0 2 0;
+#X connect 4 0 2 1;
+#X coords 0 0 1 1 50 42 0;

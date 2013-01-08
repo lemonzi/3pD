@@ -1,0 +1,29 @@
+#N canvas 242 161 314 296 10;
+#X text 17 15 3dPlaneGenerator: tries to interpolate a plane;
+#X text 17 33 from a given sequence of points;
+#X obj 67 68 3dPoint;
+#X obj 92 161 list;
+#X obj 129 127 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 129 105 metro 30;
+#X obj 129 85 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 146 85 Continuous;
+#X text 146 128 Discrete;
+#X obj 92 184 3dPlaneGenerator;
+#X obj 92 206 unpack 0 0 0 0;
+#X floatatom 71 232 5 0 0 0 - - -;
+#X floatatom 109 232 5 0 0 0 - - -;
+#X floatatom 146 232 5 0 0 0 - - -;
+#X floatatom 183 232 5 0 0 0 - - -;
+#X text 74 252 A x + B y + C z - D = 0;
+#X connect 2 0 3 1;
+#X connect 3 0 9 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 10 2 13 0;
+#X connect 10 3 14 0;

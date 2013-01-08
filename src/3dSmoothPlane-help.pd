@@ -1,0 +1,42 @@
+#N canvas 0 22 365 332 10;
+#X text 19 14 Computes an average plane from a given plane sequence
+;
+#X obj 144 163 3dPlaneGenerator;
+#X obj 119 45 3dPoint;
+#X obj 144 138 list;
+#X obj 181 104 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 181 82 metro 30;
+#X obj 181 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 198 62 Continuous;
+#X text 198 105 Discrete;
+#X obj 60 225 3dSmoothPlane;
+#X obj 60 247 unpack 0 0 0 0;
+#X floatatom 39 273 5 0 0 0 - - -;
+#X floatatom 77 273 5 0 0 0 - - -;
+#X floatatom 114 273 5 0 0 0 - - -;
+#X floatatom 151 273 5 0 0 0 - - -;
+#X text 42 293 A x + B y + C z - D = 0;
+#X obj 183 193 unpack 0 0 0 0;
+#X floatatom 162 219 5 0 0 0 - - -;
+#X floatatom 200 219 5 0 0 0 - - -;
+#X floatatom 237 219 5 0 0 0 - - -;
+#X floatatom 274 219 5 0 0 0 - - -;
+#X text 165 239 A x + B y + C z - D = 0;
+#X connect 1 0 9 0;
+#X connect 1 0 16 0;
+#X connect 2 0 3 1;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 10 2 13 0;
+#X connect 10 3 14 0;
+#X connect 16 0 17 0;
+#X connect 16 1 18 0;
+#X connect 16 2 19 0;
+#X connect 16 3 20 0;

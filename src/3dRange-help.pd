@@ -1,0 +1,19 @@
+#N canvas 163 254 344 193 10;
+#X text 14 12 3dRange: Outputs 1 if the absolute value in the;
+#X text 15 41 intlet \, 0 otherwise.;
+#X text 17 59 It accepts an argument as a preset value:;
+#X floatatom 104 92 5 0 0 0 - - -;
+#X obj 47 117 3dRange 10;
+#X floatatom 47 91 5 0 0 0 - - -;
+#X obj 47 139 sel 1 0;
+#X obj 47 160 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 66 160 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 14 27 first inlet is smaller than the number in the second
+;
+#X connect 3 0 4 1;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;

@@ -1,0 +1,32 @@
+#N canvas 560 281 351 353 10;
+#X obj 33 69 vsl 30 128 -1 1 0 0 \$0-foo_s1 \$0-foo_r empty 0 -9 0
+10 -261234 -1 -1 11404 0;
+#X obj 66 69 vsl 30 128 -1 1 0 0 \$0-foo_s2 \$0-foo_r empty 0 -9 0
+10 -261234 -1 -1 9827 0;
+#X obj 99 69 vsl 30 128 -1 4 0 0 \$0-foo_s3 \$0-foo_r empty 0 -9 0
+10 -261234 -1 -1 6452 0;
+#X floatatom 32 202 5 0 0 0 - - -;
+#X floatatom 65 202 5 0 0 0 - - -;
+#X floatatom 98 202 5 0 0 0 - - -;
+#X obj 32 8 inlet;
+#X obj 32 28 unpack 0 0 0;
+#X obj 36 256 pack 0 0 0;
+#X obj 36 279 outlet;
+#X obj 63 223 t b f;
+#X obj 99 223 t b f;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 10 0;
+#X connect 5 0 11 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;
+#X connect 7 1 1 0;
+#X connect 7 2 2 0;
+#X connect 8 0 9 0;
+#X connect 10 0 8 0;
+#X connect 10 1 8 1;
+#X connect 11 0 8 0;
+#X connect 11 1 8 2;
+#X coords 0 -1 1 1 102 170 1 30 50;

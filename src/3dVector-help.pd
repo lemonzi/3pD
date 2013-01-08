@@ -1,0 +1,9 @@
+#N canvas 183 374 311 246 10;
+#X obj 84 42 3dPoint;
+#X obj 106 130 3dVector;
+#X obj 164 42 3dPoint;
+#X obj 106 155 3dPoint;
+#X text 14 11 3dVector: makes a vector from two given points;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;

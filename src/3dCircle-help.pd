@@ -1,0 +1,32 @@
+#N canvas 204 223 291 378 10;
+#X obj 110 318 3dCircle;
+#X obj 64 223 3dPoint;
+#X floatatom 155 292 5 0 0 0 - - -;
+#X floatatom 140 271 5 0 0 0 - - -;
+#X obj 125 247 3dPlaneGenerator;
+#X obj 100 129 3dPoint;
+#X obj 125 222 list;
+#X obj 162 188 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 162 166 metro 30;
+#X obj 162 146 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 179 146 Continuous;
+#X text 179 189 Discrete;
+#X floatatom 110 342 5 0 0 0 - - -;
+#X text 16 13 3dCircle: outputs the distance to a plane \,;
+#X text 17 28 only if the input is in a circular range;
+#X text 16 49 1st inlet: input point;
+#X text 16 78 3rd inlet: circle center;
+#X text 16 93 4th inlet: circle radius;
+#X text 16 63 2nd inlet: plane;
+#X connect 0 0 12 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 3;
+#X connect 3 0 0 2;
+#X connect 4 0 0 1;
+#X connect 5 0 6 1;
+#X connect 6 0 4 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;

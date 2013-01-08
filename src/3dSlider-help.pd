@@ -1,0 +1,11 @@
+#N canvas 560 281 326 411 10;
+#X obj 22 140 3dSlider;
+#X obj 22 58 3dPoint;
+#X obj 22 318 3dPoint;
+#X text 13 13 3dPoint and 3dSlider are basic visualitzators and;
+#X text 14 29 editors/generators for the 3pD-Point datatype.;
+#X text 96 62 Any changed coordenate will force;
+#X text 96 79 the object to output the data.;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X coords 0 0 1 1 102 170 0;

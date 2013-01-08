@@ -1,0 +1,54 @@
+#N canvas 434 22 379 467 10;
+#X declare -lib mrpeach;
+#X obj 11 16 import mrpeach;
+#X obj 11 64 unpackOSC;
+#X obj 11 84 routeOSC /joint;
+#X obj 11 44 udpreceive 7110;
+#X obj 149 35 3dJointViewer;
+#X obj 169 301 3dPlaneGenerator;
+#X obj 259 35 3dJointViewer;
+#X obj 300 265 list;
+#X obj 300 219 bng 30 250 50 0 empty empty empty 17 7 0 10 -258113
+-1 -1;
+#X obj 88 375 3dRange 0.01;
+#X obj 85 408 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 34 386 7 0 0 0 - - -;
+#X obj 11 105 route l_hand r_hand;
+#X obj 88 352 3dDistToPlane;
+#X obj 11 126 s l_hand;
+#X obj 66 126 s r_hand;
+#X obj 149 15 r l_hand;
+#X obj 259 15 r r_hand;
+#X obj 176 352 print plane;
+#X obj 85 242 gate;
+#X obj 85 215 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 84 151 bng 30 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+-1;
+#X obj 62 190 delay 3000;
+#X obj 177 403 hsl 100 40 -0.1 0.1 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 9900 1;
+#X connect 1 0 2 0;
+#X connect 2 0 12 0;
+#X connect 3 0 1 0;
+#X connect 4 0 13 0;
+#X connect 4 0 7 1;
+#X connect 4 0 19 1;
+#X connect 5 0 18 0;
+#X connect 5 0 13 1;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 12 0 14 0;
+#X connect 12 1 15 0;
+#X connect 13 0 9 0;
+#X connect 13 0 11 0;
+#X connect 13 0 23 0;
+#X connect 16 0 4 0;
+#X connect 17 0 6 0;
+#X connect 19 0 5 0;
+#X connect 20 0 19 0;
+#X connect 21 0 20 0;
+#X connect 21 0 22 0;
+#X connect 22 0 20 0;

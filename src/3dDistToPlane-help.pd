@@ -1,0 +1,24 @@
+#N canvas 644 364 254 265 10;
+#X obj 44 202 3dDistToPlane;
+#X obj 35 111 3dPoint;
+#X text 15 29 of a point to the given plane;
+#X text 14 12 3dDistToPlane: computes the distance;
+#X floatatom 44 227 5 0 0 0 - - -;
+#X obj 119 177 3dPlaneGenerator;
+#X obj 94 59 3dPoint;
+#X obj 119 152 list;
+#X obj 156 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 156 96 metro 30;
+#X obj 156 76 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 173 76 Continuous;
+#X text 173 119 Discrete;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 5 0 0 1;
+#X connect 6 0 7 1;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
